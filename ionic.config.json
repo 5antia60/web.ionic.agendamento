@@ -1,0 +1,7 @@
+{
+  "name": "web.ionic.agendamento",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
