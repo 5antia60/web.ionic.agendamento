@@ -1,1 +1,53 @@
+.content {
+  width: 100%;
+  height: 100%;
+  background: #e9ffe6;
 
+  color: #053a3e;
+  font-weight: 700;
+  font-size: 1.3rem;
+  word-break: break-word;
+
+  &--page {
+    width: 100%;
+    height: 100%;
+    padding: 2rem 3rem;
+
+    h2 {
+      margin: 0.5rem 0 0 0;
+    }
+
+    &--form {
+      padding: 1.5rem 1rem;
+      margin-top: 2rem;
+
+      background: white;
+      border: 2px solid #068c18;
+      border-radius: 0.5rem;
+
+      &--options {
+        display: flex;
+        flex-wrap: wrap;
+
+        margin: 1rem 0;
+
+        &--option {
+          width: fit-content;
+
+          padding: 0.2rem 0.5rem;
+          margin: 0 0.4rem 0.4rem 0;
+
+          color: #ffffff;
+          background: #1c7815;
+          border-radius: 1rem;
+          cursor: pointer;
+          font-size: 1rem;
+        }
+
+        .selected {
+          background: #0d3f09;
+        }
+      }
+    }
+  }
+}

@@ -1,1 +1,15 @@
-<app-header></app-header>
+<div class="content">
+  <app-header></app-header>
+
+  <div class="content--page">
+    <strong>Bem-vindo NOME</strong>
+    <h2>Selecione o horário de preferência para a reunião</h2>
+
+    <div class="content--page--form">
+      <strong>Horários disponíveis:</strong>
+      <div class="content--page--form--options">
+        <p class="content--page--form--options--option" *ngFor="let time of [0,1,2,4,5,6,6,23,2]">11:20</p>
+      </div>
+    </div>
+  </div>
+</div>
