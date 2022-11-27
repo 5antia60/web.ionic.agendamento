@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, rgba(20,117,13,1) 0%, rgba(68,190,60,1) 100%);
+
+  &--title {
+    display: flex;
+    align-items: center;
+
+    img {
+      object-fit: cover;
+      height: 2.6rem;
+    }
+
+    h2 {
+      width: 6rem;
+      margin: 0 0 0 0.5rem;
+
+      color: #053a3e;
+      font-weight: 700;
+      font-size: 1.3rem;
+      word-break: break-word;
+    }
+  }
+}
