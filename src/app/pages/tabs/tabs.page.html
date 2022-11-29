@@ -2,13 +2,27 @@
   <app-header></app-header>
 
   <div class="content--page">
-    <strong>Bem-vindo NOME</strong>
+    <strong>Bem-vindo {{ invited?.nome || '' }}</strong>
     <h2>Selecione o horário de preferência para a reunião</h2>
 
-    <div class="content--page--form">
+    <div *ngIf="isSentTime" class="content--page--form">
+      <h2 style="text-align: center">Obrigado, tudo resolvido!!</h2>
+    </div>
+    <div *ngIf="!isSentTime" class="content--page--form">
+      <h2>{{ meeting?.assunto || 'Sem assunto' }}</h2>
+      <p>Reunião em {{ meeting?.data || '(sem data)' }} com duração estimada em {{ meeting?.duracao || '(sem estimativa)' }}</p>
       <strong>Horários disponíveis:</strong>
       <div class="content--page--form--options">
-        <p class="content--page--form--options--option" *ngFor="let time of [0,1,2,4,5,6,6,23,2]">11:20</p>
+        <p
+          class="content--page--form--options--option"
+          [class.selected]="i === selectedTimeIndex"
+          *ngFor="let time of meeting?.horarios; let i = index"
+          (click)="selectTimeIndex(i)">
+          {{ time }}
+        </p>
+      </div>
+      <div class="content--page--form--button-area">
+        <button (click)="onSubmit()">Enviar preferência</button>
       </div>
     </div>
   </div>
