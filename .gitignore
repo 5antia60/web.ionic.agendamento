@@ -15,7 +15,6 @@ log.txt
 /y/index.html
 /.sourcemaps
 /.versions
-/coverage
 
 # Ionic
 /.ionic
